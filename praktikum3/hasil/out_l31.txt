@@ -1,0 +1,28 @@
+transfer  1: sukses=True
+transfer  2: sukses=True
+transfer  3: sukses=True
+  percobaan 1 gagal (DEADLINE_EXCEEDED), ulang dalam 0.5 s
+transfer  4: sukses=True
+transfer  5: sukses=True
+transfer  6: sukses=True
+transfer  7: sukses=True
+transfer  8: sukses=True
+  percobaan 1 gagal (DEADLINE_EXCEEDED), ulang dalam 0.5 s
+transfer  9: sukses=True
+  percobaan 1 gagal (DEADLINE_EXCEEDED), ulang dalam 0.5 s
+transfer 10: sukses=True
+transfer 11: sukses=True
+transfer 12: sukses=True
+transfer 13: sukses=True
+transfer 14: sukses=True
+  percobaan 1 gagal (DEADLINE_EXCEEDED), ulang dalam 0.5 s
+transfer 15: sukses=True
+transfer 16: sukses=True
+  percobaan 1 gagal (DEADLINE_EXCEEDED), ulang dalam 0.5 s
+transfer 17: sukses=True
+  percobaan 1 gagal (DEADLINE_EXCEEDED), ulang dalam 0.5 s
+transfer 18: sukses=True
+transfer 19: sukses=True
+  percobaan 1 gagal (DEADLINE_EXCEEDED), ulang dalam 0.5 s
+transfer 20: sukses=True
+saldo akhir: {'A': 800.0, 'B': 700.0} | total = 1500 | A berkurang 200

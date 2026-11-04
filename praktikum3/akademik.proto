@@ -1,0 +1,24 @@
+syntax = "proto3";
+package akademik;
+
+service LayananNilai {
+  rpc GetMahasiswa (MahasiswaRequest) returns (Mahasiswa);            // unary
+  rpc TambahNilai (NilaiRequest) returns (StatusResponse);            // unary
+  rpc StreamNilai (MahasiswaRequest) returns (stream Nilai);          // server streaming
+  rpc KirimBanyakNilai (stream NilaiRequest) returns (StatusResponse); // client streaming (L2.1)
+  rpc Diskusi (stream Pesan) returns (stream Pesan);                  // bidirectional streaming (L2.2)
+  rpc Transfer (TransferRequest) returns (StatusResponse);            // Praktikum 3
+}
+
+message MahasiswaRequest { string nim = 1; }
+message Mahasiswa { string nim = 1; string nama = 2; double ipk = 3; string prodi = 4; } // prodi: L2.3
+message NilaiRequest { string nim = 1; string matkul = 2; double nilai = 3; }
+message Nilai { string matkul = 1; double nilai = 2; }
+message StatusResponse { bool sukses = 1; string pesan = 2; }
+message Pesan { string pengirim = 1; string isi = 2; }
+message TransferRequest {
+  string request_id = 1;
+  string dari = 2;
+  string ke = 3;
+  double jumlah = 4;
+}

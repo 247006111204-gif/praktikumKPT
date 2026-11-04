@@ -1,0 +1,3 @@
+pangkat(2, 10) = 1024
+akar(144)      = 12.0
+akar(-4) -> Fault: <class 'ValueError'>:Akar bilangan negatif tidak didefinisikan

@@ -1,0 +1,17 @@
+# Dua container pada jaringan Docker yang sama: "server" dan "client".
+services:
+  server:
+    build: .
+    environment:
+      - DB=/data/bioskop.db
+    volumes:
+      - data:/data            # SQLite berada di volume: state tetap ada setelah container restart
+    ports:
+      - "50051:50051"
+  client:
+    build: .
+    depends_on: [server]
+    # Client memakai nama layanan "server" sebagai alamat (bukan localhost)
+    command: ["python", "demo_client.py", "--server", "server:50051", "jadwal"]
+volumes:
+  data:

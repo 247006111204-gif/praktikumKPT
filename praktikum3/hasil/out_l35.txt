@@ -1,0 +1,9 @@
+panggilan 1: dijawab localhost:50051 -> Andi
+panggilan 2: dijawab localhost:50051 -> Andi
+panggilan 3: dijawab localhost:50051 -> Andi
+panggilan 4: dijawab localhost:50051 -> Andi
+panggilan 5: localhost:50051 UNAVAILABLE, pindah ke server berikutnya
+panggilan 5: dijawab localhost:50052 -> Andi
+panggilan 6: dijawab localhost:50052 -> Andi
+panggilan 7: dijawab localhost:50052 -> Andi
+panggilan 8: dijawab localhost:50052 -> Andi

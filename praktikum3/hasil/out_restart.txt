@@ -1,0 +1,10 @@
+== MODE=campur ==
+client: balasan tidak diterima -> UNAVAILABLE (server crash setelah COMMIT)
+server crash -> dijalankan ulang
+client: retry setelah restart -> Saldo kini {'A': 800.0, 'B': 700.0}
+saldo akhir: {'A': 800.0, 'B': 700.0} | A berkurang 200 (seharusnya 100)
+== MODE=sqlite ==
+client: balasan tidak diterima -> UNAVAILABLE (server crash setelah COMMIT)
+server crash -> dijalankan ulang
+client: retry setelah restart -> Saldo kini {'A': 900.0, 'B': 600.0} (balasan lama, tidak dieksekusi ulang)
+saldo akhir: {'A': 900.0, 'B': 600.0} | A berkurang 100 (seharusnya 100)

@@ -1,0 +1,6 @@
+Andi - IPK 3.26
+Nilai tersimpan
+  Basis Data: 85.0
+  Jaringan: 78.0
+  Komputasi Paralel: 88.0
+Error: StatusCode.NOT_FOUND NIM 9999 tidak ditemukan

@@ -1,0 +1,36 @@
+send: b'POST / HTTP/1.1\r\nHost: localhost:8000\r\nAccept-Encoding: gzip\r\nContent-Type: text/xml\r\nUser-Agent: Python-xmlrpc/3.13\r\nContent-Length: 112\r\n\r\n'
+send: b"<?xml version='1.0'?>\n<methodCall>\n<methodName>system.listMethods</methodName>\n<params>\n</params>\n</methodCall>\n"
+reply: 'HTTP/1.0 200 OK\r\n'
+header: Server: BaseHTTP/0.6 Python/3.13.18
+header: Date: Wed, 04 Nov 2026 12:11:29 GMT
+header: Content-type: text/xml
+header: Content-length: 563
+body: b"<?xml version='1.0'?>\n<methodResponse>\n<params>\n<param>\n<value><array><data>\n<value><string>akar</string></value>\n<value><string>bagi</string></value>\n<value><string>echo</string></value>\n<value><string>kali</string></value>\n<value><string>pangkat</string></value>\n<value><string>statistik</string></value>\n<value><string>system.listMethods</string></value>\n<value><string>system.methodHelp</string></value>\n<value><string>system.methodSignature</string></value>\n<value><string>tambah</string></value>\n</data></array></value>\n</param>\n</params>\n</methodResponse>\n"
+Daftar method: ['akar', 'bagi', 'echo', 'kali', 'pangkat', 'statistik', 'system.listMethods', 'system.methodHelp', 'system.methodSignature', 'tambah']
+send: b'POST / HTTP/1.1\r\nHost: localhost:8000\r\nAccept-Encoding: gzip\r\nContent-Type: text/xml\r\nUser-Agent: Python-xmlrpc/3.13\r\nContent-Length: 190\r\n\r\n'
+send: b"<?xml version='1.0'?>\n<methodCall>\n<methodName>tambah</methodName>\n<params>\n<param>\n<value><int>5</int></value>\n</param>\n<param>\n<value><int>3</int></value>\n</param>\n</params>\n</methodCall>\n"
+reply: 'HTTP/1.0 200 OK\r\n'
+header: Server: BaseHTTP/0.6 Python/3.13.18
+header: Date: Wed, 04 Nov 2026 12:11:29 GMT
+header: Content-type: text/xml
+header: Content-length: 121
+body: b"<?xml version='1.0'?>\n<methodResponse>\n<params>\n<param>\n<value><int>8</int></value>\n</param>\n</params>\n</methodResponse>\n"
+5 + 3 = 8
+send: b'POST / HTTP/1.1\r\nHost: localhost:8000\r\nAccept-Encoding: gzip\r\nContent-Type: text/xml\r\nUser-Agent: Python-xmlrpc/3.13\r\nContent-Length: 188\r\n\r\n'
+send: b"<?xml version='1.0'?>\n<methodCall>\n<methodName>kali</methodName>\n<params>\n<param>\n<value><int>4</int></value>\n</param>\n<param>\n<value><int>7</int></value>\n</param>\n</params>\n</methodCall>\n"
+reply: 'HTTP/1.0 200 OK\r\n'
+header: Server: BaseHTTP/0.6 Python/3.13.18
+header: Date: Wed, 04 Nov 2026 12:11:29 GMT
+header: Content-type: text/xml
+header: Content-length: 122
+body: b"<?xml version='1.0'?>\n<methodResponse>\n<params>\n<param>\n<value><int>28</int></value>\n</param>\n</params>\n</methodResponse>\n"
+4 x 7 = 28
+send: b'POST / HTTP/1.1\r\nHost: localhost:8000\r\nAccept-Encoding: gzip\r\nContent-Type: text/xml\r\nUser-Agent: Python-xmlrpc/3.13\r\nContent-Length: 189\r\n\r\n'
+send: b"<?xml version='1.0'?>\n<methodCall>\n<methodName>bagi</methodName>\n<params>\n<param>\n<value><int>10</int></value>\n</param>\n<param>\n<value><int>0</int></value>\n</param>\n</params>\n</methodCall>\n"
+reply: 'HTTP/1.0 200 OK\r\n'
+header: Server: BaseHTTP/0.6 Python/3.13.18
+header: Date: Wed, 04 Nov 2026 12:11:29 GMT
+header: Content-type: text/xml
+header: Content-length: 302
+body: b"<?xml version='1.0'?>\n<methodResponse>\n<fault>\n<value><struct>\n<member>\n<name>faultCode</name>\n<value><int>1</int></value>\n</member>\n<member>\n<name>faultString</name>\n<value><string>&lt;class 'ValueError'&gt;:Pembagian dengan nol</string></value>\n</member>\n</struct></value>\n</fault>\n</methodResponse>\n"
+Error dari server: <class 'ValueError'>:Pembagian dengan nol

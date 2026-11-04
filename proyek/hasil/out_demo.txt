@@ -1,0 +1,15 @@
+J1: Petualangan Senja | Studio 1 | 19:00 | 8 baris x 10 kursi
+J2: Misteri Kota Tua | Studio 2 | 21:00 | 6 baris x 8 kursi
+UJI: Studio Uji Beban | Studio X | 00:00 | 26 baris x 100 kursi
+BERHASIL: Booking BK-3b09db93 berhasil []
+GAGAL: Kursi sudah dipesan orang lain ['A2']
+J1: 2 kursi terpesan dari 80: ['A1', 'A2']
+booking Budi: BK-63992a54
+BERHASIL: Booking BK-63992a54 dibatalkan
+Error: INVALID_ARGUMENT Kursi tidak valid: ['Z99']
+--- keluaran pantau ---
+Memantau J1 (Ctrl+C untuk berhenti)...
+A1 TERPESAN oleh Andi
+A2 TERPESAN oleh Andi
+C5 TERPESAN oleh Budi
+C5 DIBATALKAN oleh Budi

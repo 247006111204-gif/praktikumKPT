@@ -1,0 +1,2 @@
+client BARU menerima: nama=Andi, ipk=3.35, prodi=Informatika
+field di stub baru: ['nim', 'nama', 'ipk', 'prodi']

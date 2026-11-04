@@ -1,0 +1,43 @@
+statistik [4, 8, 15, 16, 23, 42] = {'min': 4, 'max': 42, 'rata2': 18.0}
+tipe hasil: dict
+--- XML permintaan ---
+<?xml version='1.0'?>
+<methodCall>
+<methodName>statistik</methodName>
+<params>
+<param>
+<value><array><data>
+<value><int>4</int></value>
+<value><int>8</int></value>
+<value><int>15</int></value>
+<value><int>16</int></value>
+<value><int>23</int></value>
+<value><int>42</int></value>
+</data></array></value>
+</param>
+</params>
+</methodCall>
+
+--- XML balasan ---
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><struct>
+<member>
+<name>min</name>
+<value><int>4</int></value>
+</member>
+<member>
+<name>max</name>
+<value><int>42</int></value>
+</member>
+<member>
+<name>rata2</name>
+<value><double>18.0</double></value>
+</member>
+</struct></value>
+</param>
+</params>
+</methodResponse>
+

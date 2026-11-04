@@ -1,0 +1,5 @@
+Protobuf (nim, nama, ipk, prodi): 37 byte
+Protobuf (nim, nama, ipk)       : 24 byte
+XML-RPC <methodResponse> struct : 432 byte
+Rasio XML-RPC / Protobuf        : 11.7x
+heksadesimal protobuf: 0a 07 32 30 32 33 30 30 31 12 04 41 6e 64 69 19 14 ae 47 e1 7a 14 0a 40 22 0b 49 6e 66 6f 72 6d 61 74 69 6b 61

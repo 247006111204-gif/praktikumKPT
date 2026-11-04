@@ -1,0 +1,14 @@
+syntax = "proto3";
+package akademik;
+
+service LayananNilai {
+  rpc GetMahasiswa (MahasiswaRequest) returns (Mahasiswa);
+  rpc TambahNilai (NilaiRequest) returns (StatusResponse);
+  rpc StreamNilai (MahasiswaRequest) returns (stream Nilai);
+}
+
+message MahasiswaRequest { string nim = 1; }
+message Mahasiswa { string nim = 1; string nama = 2; double ipk = 3; }
+message NilaiRequest { string nim = 1; string matkul = 2; double nilai = 3; }
+message Nilai { string matkul = 1; double nilai = 2; }
+message StatusResponse { bool sukses = 1; string pesan = 2; }

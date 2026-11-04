@@ -1,0 +1,3 @@
+client lama menerima: nama=Andi, ipk=3.35
+field terdefinisi di stub lama: ['nim', 'nama', 'ipk']
+byte tak dikenal (field prodi) dipertahankan: 37 byte setelah serialisasi ulang

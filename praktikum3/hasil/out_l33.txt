@@ -1,0 +1,14 @@
+== (a) TANPA lock, kode persis modul (SALDO[x] -= jumlah) ==
+saldo akhir: {'A': 500.0, 'B': 1000.0} | total = 1500 (seharusnya 1500) | A = 500 (seharusnya 500)
+saldo akhir: {'A': 500.0, 'B': 1000.0} | total = 1500 (seharusnya 1500) | A = 500 (seharusnya 500)
+saldo akhir: {'A': 500.0, 'B': 1000.0} | total = 1500 (seharusnya 1500) | A = 500 (seharusnya 500)
+saldo akhir: {'A': 500.0, 'B': 1000.0} | total = 1500 (seharusnya 1500) | A = 500 (seharusnya 500)
+saldo akhir: {'A': 500.0, 'B': 1000.0} | total = 1500 (seharusnya 1500) | A = 500 (seharusnya 500)
+== (b) TANPA lock, simulasi I/O 1 ms di tengah transfer ==
+saldo akhir: {'A': 850.0, 'B': 650.0} | total = 1500 (seharusnya 1500) | A = 850 (seharusnya 500)
+saldo akhir: {'A': 840.0, 'B': 650.0} | total = 1490 (seharusnya 1500) | A = 840 (seharusnya 500)
+saldo akhir: {'A': 860.0, 'B': 660.0} | total = 1520 (seharusnya 1500) | A = 860 (seharusnya 500)
+== (c) DENGAN lock, simulasi I/O 1 ms ==
+saldo akhir: {'A': 500.0, 'B': 1000.0} | total = 1500 (seharusnya 1500) | A = 500 (seharusnya 500)
+saldo akhir: {'A': 500.0, 'B': 1000.0} | total = 1500 (seharusnya 1500) | A = 500 (seharusnya 500)
+saldo akhir: {'A': 500.0, 'B': 1000.0} | total = 1500 (seharusnya 1500) | A = 500 (seharusnya 500)

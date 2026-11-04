@@ -1,0 +1,6 @@
+[Ani] kirim   : Halo, ada yang sudah kerjakan L2.2?
+[Budi] terima  : <Ani> Halo, ada yang sudah kerjakan L2.2?
+[Budi] kirim   : Halo Ani, sudah selesai.
+[Ani] terima  : <Budi> Halo Ani, sudah selesai.
+[Ani] kirim   : Oke, kita bandingkan hasilnya.
+[Budi] terima  : <Ani> Oke, kita bandingkan hasilnya.

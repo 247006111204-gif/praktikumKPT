@@ -1,0 +1,9 @@
+(a) datetime dikirim : datetime.datetime(2026, 11, 4, 9, 30, 15)
+    datetime kembali : <DateTime '20261104T09:30:15' at 0x7f4dac1746e0> | tipe: DateTime
+    use_datetime=True: datetime.datetime(2026, 11, 4, 9, 30, 15)
+(b) bilangan besar
+    echo(2147483647) -> 2147483647
+    echo(2147483648) -> OverflowError: int exceeds XML-RPC limits
+    echo(9223372036854775808) -> OverflowError: int exceeds XML-RPC limits
+(c) dikirim sebagai string, 2**100 kembali sama persis: True
+    float(10**30+1) kembali: 1e+30 | sama dengan aslinya? False

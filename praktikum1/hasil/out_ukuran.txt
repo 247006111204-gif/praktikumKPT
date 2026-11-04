@@ -1,0 +1,24 @@
+--- methodCall ---
+<?xml version='1.0'?>
+<methodCall>
+<methodName>tambah</methodName>
+<params>
+<param>
+<value><int>5</int></value>
+</param>
+<param>
+<value><int>3</int></value>
+</param>
+</params>
+</methodCall>
+--- methodResponse ---
+<?xml version='1.0'?>
+<methodResponse>
+<params>
+<param>
+<value><int>8</int></value>
+</param>
+</params>
+</methodResponse>
+Ukuran methodCall     : 190 byte (dengan newline akhir)
+Ukuran methodResponse : 121 byte

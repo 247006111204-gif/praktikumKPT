@@ -1,0 +1,3 @@
+100 panggilan RPC   : 59.18 ms (0.592 ms/panggilan)
+100 panggilan lokal : 0.0047 ms
+RPC / lokal         : 12464x

@@ -1,0 +1,66 @@
+syntax = "proto3";
+package bioskop;
+
+// Sistem reservasi tiket bioskop. Beberapa client dapat memesan kursi yang sama secara bersamaan;
+// server menjamin satu kursi hanya dimiliki satu pemesan.
+service Bioskop {
+  rpc ListJadwal (Kosong) returns (DaftarJadwal);                  // unary: daftar jadwal tayang
+  rpc GetDenah (DenahRequest) returns (Denah);                     // unary: kursi yang sudah terpesan
+  rpc PesanKursi (PesanRequest) returns (PesanResponse);           // unary: pesan 1+ kursi (semua atau tidak sama sekali)
+  rpc BatalPesan (BatalRequest) returns (BatalResponse);           // unary: batalkan booking
+  rpc PantauKursi (PantauRequest) returns (stream PerubahanKursi); // server streaming: status kursi real-time
+}
+
+message Kosong {}
+
+message Jadwal {
+  string id = 1;
+  string film = 2;
+  string studio = 3;
+  string waktu = 4;
+  int32 baris = 5;   // jumlah baris (A, B, C, ...)
+  int32 kolom = 6;   // jumlah kursi per baris
+}
+message DaftarJadwal { repeated Jadwal jadwal = 1; }
+
+message DenahRequest { string jadwal_id = 1; }
+message Denah {
+  string jadwal_id = 1;
+  int32 baris = 2;
+  int32 kolom = 3;
+  repeated string terpesan = 4;   // contoh: "A1", "C7"
+}
+
+// request_id dibuat client satu kali per operasi dan dipakai ulang pada setiap retry (deduplikasi).
+message PesanRequest {
+  string request_id = 1;
+  string jadwal_id = 2;
+  string pemesan = 3;
+  repeated string kursi = 4;
+}
+message PesanResponse {
+  bool sukses = 1;
+  string pesan = 2;
+  string booking_id = 3;
+  repeated string kursi_gagal = 4;   // kursi yang sudah dipesan orang lain
+}
+
+message BatalRequest {
+  string request_id = 1;
+  string booking_id = 2;
+  string pemesan = 3;
+}
+message BatalResponse {
+  bool sukses = 1;
+  string pesan = 2;
+}
+
+message PantauRequest { string jadwal_id = 1; }
+message PerubahanKursi {
+  string jadwal_id = 1;
+  string kursi = 2;
+  string status = 3;     // "TERPESAN" atau "DIBATALKAN"
+  string pemesan = 4;
+  int64 waktu_ms = 5;    // waktu server (epoch, milidetik)
+  bool snapshot = 6;     // true untuk keadaan awal yang dikirim saat mulai memantau
+}

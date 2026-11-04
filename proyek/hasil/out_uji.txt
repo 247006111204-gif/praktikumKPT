@@ -1,0 +1,11 @@
+[LULUS] U1 50 client berebut kursi A1: tepat 1 sukses -> sukses=1, gagal=49
+[LULUS] U2 200 permintaan pada 20 kursi: tepat 20 sukses, tanpa kursi ganda -> sukses=20, kursi terpesan=21
+[LULUS] U3 multi-kursi atomik (D2 bentrok, D3 tidak ikut terpesan) -> kursi_gagal=['D2']
+[LULUS] U4 request_id sama x10 serentak: satu booking -> booking_id unik=1
+[LULUS] U5 batal: pemilik saja, idempoten, kursi bebas lagi -> salah='Booking milik pemesan lain'; ulang='Booking tidak ditemukan'
+[LULUS] U6 PantauKursi menerima TERPESAN lalu DIBATALKAN secara berurutan -> [('A1', 'TERPESAN'), ('A1', 'DIBATALKAN')]; selisih waktu server-ke-client [1.4, 1.2] ms
+       PesanKursi: percobaan 1 gagal (DEADLINE_EXCEEDED), ulang dalam 0.21 s
+[LULUS] U7 balasan terlambat 3 s (> timeout 2 s): retry berhasil, hanya satu booking -> retry=1, kursi A5 muncul 1x, total 2.2 s
+[LULUS] U8 crash setelah COMMIT lalu restart: retry tidak membuat booking ganda, state bertahan -> client semula UNAVAILABLE; booking_id=BK-283c5620; denah=['G1', 'G2']; pemesan lain ditolak=True
+
+Ringkasan: 8 dari 8 uji lulus

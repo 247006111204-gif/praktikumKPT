@@ -1,0 +1,4 @@
+10 permintaan sinkron berurutan : 1018 ms
+10 permintaan asinkron (.future): 105 ms
+jumlah hasil dikumpulkan        : 10, contoh: Andi, IPK 3.26
+percepatan                      : 9.7x

@@ -1,0 +1,5 @@
+kirim: 2023002 Sistem Operasi = 80
+kirim: 2023002 Kalkulus = 75
+kirim: 2023002 Statistika = 90
+balasan server: True - 3 nilai tersimpan
+nilai Sari kini: [('Basis Data', 92.0), ('Sistem Operasi', 80.0), ('Kalkulus', 75.0), ('Statistika', 90.0)]
